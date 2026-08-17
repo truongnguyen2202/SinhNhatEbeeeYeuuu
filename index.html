@@ -128,7 +128,29 @@ h1 em { color:var(--rose); font-weight:400; }.heart { font-size:39px; margin:28p
 @keyframes giftCtaPress { 40%{transform:scale(.96)} 100%{opacity:.65;transform:scale(.98)} }
 @media(max-width:520px){.gift-stage{padding:34px 14px 22px;border-radius:28px}.gift-copy{padding:0 8px}.gift-copy h2{font-size:31px}.gift-copy>p:last-child{font-size:13px}.gift-scene{height:220px}.gift-bear{left:-2px}.gift-box{left:62%}.gift-confetti i{left:62%}.gift-cta{padding-left:16px}.bear-bubble{left:0}}
 @media(prefers-reduced-motion:reduce){.gift-rays,.gift-bear,.gb-eye,.gb-arm,.bear-bubble,.gift-lid{animation:none!important}.gift-button *{transition:none!important}}
-.letter { margin:0 auto; text-align:center; background:#fff; padding:47px 28px; border-radius:28px; box-shadow:0 18px 38px #9c67701c; max-width:600px; position:relative; animation:letterIn .55s ease both; }.letter p { margin-left:auto; margin-right:auto; }.sign { color:var(--deep); font-style:italic; font-family:Georgia,serif; }.sparkle { position:absolute; color:#e6ad5a; font-size:23px; animation:twinkle 1.8s infinite; }.s1{top:17px;left:24px}.s2{right:26px;bottom:19px;animation-delay:.7s}.peek-bear { position:absolute; top:-45px; right:25px; font-size:55px; transform:rotate(8deg); animation:peek 2.5s ease-in-out infinite; } footer { text-align:center; border-top:1px solid #f1ddd4; padding:24px; color:#9b7880; font:italic 13px Georgia,serif; }
+.letter { margin:0 auto; text-align:center; background:#fff; padding:47px 28px; border-radius:28px; box-shadow:0 18px 38px #9c67701c; max-width:600px; position:relative; animation:letterIn .55s ease both; }.letter p { margin-left:auto; margin-right:auto; }.sign { color:var(--deep); font-style:italic; font-family:Georgia,serif; }
+.final-surprise { position:relative; margin-top:25px; padding-top:22px; border-top:1px dashed #e9c8d0; }
+.final-surprise-button { appearance:none; border:0; border-radius:999px; padding:13px 21px; color:#fff; background:linear-gradient(135deg,#d9798d,#b95370); box-shadow:0 10px 22px #b9537033; font:800 14px Arial,sans-serif; letter-spacing:.01em; cursor:pointer; transition:transform .22s ease,box-shadow .22s ease,opacity .22s ease; }
+.final-surprise-button:hover { transform:translateY(-2px) scale(1.02); box-shadow:0 14px 26px #b9537040; }
+.final-surprise-button:focus-visible { outline:3px solid #efb8c5; outline-offset:3px; }
+.final-surprise-button:disabled { cursor:default; opacity:.82; transform:none; }
+.final-message { max-height:0; opacity:0; overflow:hidden; transform:translateY(9px) scale(.98); transition:max-height .65s ease,opacity .4s ease,transform .5s cubic-bezier(.22,.72,.2,1),margin .45s ease; margin:0 auto; }
+.final-message.is-visible { max-height:260px; opacity:1; transform:none; margin-top:18px; }
+.final-message-inner { padding:18px 18px 17px; border:1px solid #f1ced7; border-radius:19px; background:linear-gradient(145deg,#fff7f8,#fdecef); box-shadow:0 12px 26px #9c677015; }
+.final-message strong { display:block; margin-bottom:8px; color:var(--deep); font:700 20px Georgia,serif; }
+.final-message p { margin:0 auto 8px; max-width:460px; line-height:1.7; }
+.final-message small { color:#a46b79; font-style:italic; }
+.final-heart-pop { position:absolute; left:50%; top:17px; width:1px; height:1px; pointer-events:none; }
+.final-heart-pop span { position:absolute; opacity:0; font-size:16px; transform:translate(-50%,0) scale(.4); }
+.final-surprise.is-revealed .final-heart-pop span { animation:finalHeartPop 1s cubic-bezier(.18,.72,.2,1) both; }
+.final-heart-pop span:nth-child(1){--hx:-86px;--hy:-52px;animation-delay:.02s!important}
+.final-heart-pop span:nth-child(2){--hx:-42px;--hy:-76px;animation-delay:.1s!important}
+.final-heart-pop span:nth-child(3){--hx:0px;--hy:-88px;animation-delay:.05s!important}
+.final-heart-pop span:nth-child(4){--hx:45px;--hy:-73px;animation-delay:.13s!important}
+.final-heart-pop span:nth-child(5){--hx:88px;--hy:-50px;animation-delay:.08s!important}
+@keyframes finalHeartPop { 0%{opacity:0;transform:translate(-50%,5px) scale(.35) rotate(-8deg)} 28%{opacity:1} 100%{opacity:0;transform:translate(calc(-50% + var(--hx)),var(--hy)) scale(1.05) rotate(10deg)} }
+@media(max-width:600px){.final-surprise-button{padding:12px 16px;font-size:13px}.final-message-inner{padding:16px 14px}.final-message strong{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.final-message,.final-surprise-button{transition:none!important}.final-surprise.is-revealed .final-heart-pop span{animation:none!important;display:none}}.sparkle { position:absolute; color:#e6ad5a; font-size:23px; animation:twinkle 1.8s infinite; }.s1{top:17px;left:24px}.s2{right:26px;bottom:19px;animation-delay:.7s}.peek-bear { position:absolute; top:-45px; right:25px; font-size:55px; transform:rotate(8deg); animation:peek 2.5s ease-in-out infinite; } footer { text-align:center; border-top:1px solid #f1ddd4; padding:24px; color:#9b7880; font:italic 13px Georgia,serif; }
 
 .bear-sticker { position:absolute; width:82px; height:72px; top:42px; right:38px; animation:bearFloat 3.8s ease-in-out infinite; filter:drop-shadow(0 9px 10px #744b5120); }
 .bear-face { position:absolute; width:67px; height:60px; left:8px; top:10px; border-radius:48% 48% 44% 44%; background:#c78e73; border:3px solid #704b47; z-index:2; }
@@ -259,6 +281,17 @@ h1 em { color:var(--rose); font-weight:400; }.heart { font-size:39px; margin:28p
         <h2>Chúc ebeee yêuuuuu của anh sinh nhật vui thật là vui!</h2>
         <p>Cảm ơn em đã bước vào cuộc đời anh, mang theo cái nết đáng yêu, mấy lần nhõng nhẽo và cả nụ cười khiến anh nhìn hoài không chán. Tuổi mới, anh chỉ mong công chúa của anh luôn được vui, được yêu chiều và làm mọi điều em thích. Còn anh thì xin một chiếc vé thật lâu dài để tiếp tục thương em, chọc em cười và ôm em mỗi khi em mệt nha. 🩷</p>
         <p class="sign">— anh, người mê công chúa nhất trên đời</p>
+        <div class="final-surprise" id="final-surprise">
+          <span class="final-heart-pop" aria-hidden="true"><span>🩷</span><span>💗</span><span>🩷</span><span>💕</span><span>🩷</span></span>
+          <button class="final-surprise-button" id="final-surprise-button" type="button" aria-controls="final-message" aria-expanded="false">Công chúa đọc xong chưa nè?</button>
+          <div class="final-message" id="final-message" hidden>
+            <div class="final-message-inner">
+              <strong>Còn một điều cuối cùng nè…</strong>
+              <p>Đọc xong thì quay sang ôm anh một cái nha. Quà trên web hết rồi, còn quà thật anh giữ nèee 🩷</p>
+              <small>Không được đọc xong rồi chạy đâu đó nhaaa 😚</small>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -330,6 +363,26 @@ h1 em { color:var(--rose); font-weight:400; }.heart { font-size:39px; margin:28p
           birthdayLetter.hidden = false;
           birthdayLetter.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "center" });
         }, prefersReducedMotion ? 120 : 1900);
+      });
+
+      const finalSurprise = document.getElementById("final-surprise");
+      const finalSurpriseButton = document.getElementById("final-surprise-button");
+      const finalMessage = document.getElementById("final-message");
+
+      finalSurpriseButton.addEventListener("click", () => {
+        if (finalSurpriseButton.disabled) return;
+        finalSurpriseButton.disabled = true;
+        finalSurpriseButton.setAttribute("aria-expanded", "true");
+        finalSurpriseButton.textContent = "Anh biết công chúa đọc xong rồi nè 🩷";
+        finalMessage.hidden = false;
+        finalSurprise.classList.add("is-revealed");
+
+        window.requestAnimationFrame(() => {
+          finalMessage.classList.add("is-visible");
+          window.setTimeout(() => {
+            finalMessage.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "nearest" });
+          }, prefersReducedMotion ? 0 : 180);
+        });
       });
     })();
   </script>
