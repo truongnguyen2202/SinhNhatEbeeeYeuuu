@@ -45,23 +45,37 @@ h1 em { color:var(--rose); font-weight:400; }.heart { font-size:39px; margin:28p
 .gift-button:not(:disabled):hover .gift-scene { transform:translateY(-5px); }
 .gift-floor { position:absolute; left:50%; bottom:12px; width:245px; height:29px; border-radius:50%; background:radial-gradient(ellipse,rgba(116,67,79,.22),transparent 69%); transform:translateX(-50%); filter:blur(2px); }
 .gift-rays { position:absolute; left:57%; bottom:39px; width:185px; height:185px; border-radius:50%; opacity:.55; transform:translateX(-50%); background:repeating-conic-gradient(from 2deg,rgba(255,205,103,.28) 0 8deg,transparent 8deg 21deg); animation:giftRays 18s linear infinite; }
-.gift-bear { position:absolute; left:20px; bottom:25px; width:112px; height:145px; z-index:3; transform-origin:55% 100%; animation:giftBearBounce 2.8s ease-in-out infinite; filter:drop-shadow(0 11px 12px rgba(104,67,66,.18)); }
-.gb-ear { position:absolute; top:25px; width:33px; height:33px; border:3px solid #744c48; border-radius:50%; background:#bd846b; z-index:1; }
-.gb-ear:after { content:""; position:absolute; inset:7px; border-radius:50%; background:#eab3ae; }
-.gb-ear-left { left:7px; }.gb-ear-right { right:7px; }
-.gb-head { position:absolute; top:35px; left:14px; width:84px; height:75px; border:3px solid #744c48; border-radius:48% 48% 44% 44%; background:linear-gradient(145deg,#d59b7d,#bd8068); z-index:3; }
-.gb-eye { position:absolute; top:29px; width:7px; height:9px; border-radius:50%; background:#4f3535; transform-origin:center; animation:giftBearBlink 4.2s infinite; }
-.gb-eye-left { left:22px; }.gb-eye-right { right:22px; }
-.gb-brow { position:absolute; top:20px; width:16px; height:8px; border-top:2px solid #6d4643; border-radius:50%; }
-.gb-brow-left { left:14px; transform:rotate(-8deg); }.gb-brow-right { right:14px; transform:rotate(8deg); }
-.gb-muzzle { position:absolute; left:50%; bottom:9px; width:35px; height:25px; border-radius:50%; background:#f1d0b7; transform:translateX(-50%); }
-.gb-muzzle:before { content:""; position:absolute; top:5px; left:50%; width:8px; height:6px; border-radius:50% 50% 45% 45%; background:#573b39; transform:translateX(-50%); }
-.gb-muzzle:after { content:"⌣"; position:absolute; top:5px; left:50%; color:#573b39; font:700 17px/1 Arial,sans-serif; transform:translateX(-50%); }
-.gb-body { position:absolute; left:24px; bottom:0; width:65px; height:57px; border:3px solid #744c48; border-radius:44% 44% 28% 28%; background:linear-gradient(145deg,#c98e72,#b97862); z-index:1; }
-.gb-body:after { content:""; position:absolute; left:50%; top:11px; width:36px; height:31px; border-radius:50%; background:#ecc4a9; transform:translateX(-50%); }
-.gb-arm { position:absolute; top:92px; width:28px; height:55px; border:3px solid #744c48; border-radius:48%; background:#c98e72; z-index:4; transform-origin:50% 10%; }
-.gb-arm-left { left:4px; transform:rotate(25deg); animation:giftBearWaveLeft 2.2s ease-in-out infinite; }
-.gb-arm-right { right:3px; transform:rotate(-32deg); animation:giftBearWaveRight 1.9s ease-in-out infinite; }
+.gift-bear { position:absolute; left:14px; bottom:20px; width:128px; height:158px; z-index:6; transform-origin:58% 100%; animation:giftBearBreathe 3.2s ease-in-out infinite; filter:drop-shadow(0 12px 13px rgba(104,67,66,.2)); }
+.gb-ear { position:absolute; top:22px; width:37px; height:37px; border:3px solid #704744; border-radius:50%; background:linear-gradient(145deg,#d49b7d,#b97862); z-index:1; }
+.gb-ear:after { content:""; position:absolute; inset:7px; border-radius:50%; background:linear-gradient(145deg,#f2c0bd,#df9f9d); box-shadow:inset 0 2px 3px rgba(112,71,68,.12); }
+.gb-ear-left { left:5px; transform:rotate(-9deg); }.gb-ear-right { right:5px; transform:rotate(9deg); }
+.gb-head { position:absolute; top:34px; left:15px; width:98px; height:84px; border:3px solid #704744; border-radius:49% 49% 44% 44%; background:radial-gradient(circle at 33% 23%,rgba(255,255,255,.23),transparent 24%),linear-gradient(145deg,#dca385,#b97660); box-shadow:inset 0 -7px 12px rgba(116,64,56,.11); z-index:4; transform-origin:50% 78%; }
+.gb-eye { position:absolute; top:31px; width:8px; height:10px; border-radius:50%; background:#493231; transform-origin:center; animation:giftBearBlink 4.4s infinite; }
+.gb-eye:after { content:""; position:absolute; left:2px; top:1px; width:2.5px; height:2.5px; border-radius:50%; background:#fff; }
+.gb-eye-left { left:25px; }.gb-eye-right { right:25px; }
+.gb-brow { position:absolute; top:21px; width:17px; height:8px; border-top:2px solid rgba(93,57,54,.72); border-radius:50%; }
+.gb-brow-left { left:17px; transform:rotate(-7deg); }.gb-brow-right { right:17px; transform:rotate(7deg); }
+.gb-cheek { position:absolute; top:47px; width:15px; height:8px; border-radius:50%; background:rgba(226,125,131,.45); filter:blur(.2px); }
+.gb-cheek-left { left:11px; }.gb-cheek-right { right:11px; }
+.gb-muzzle { position:absolute; left:50%; bottom:9px; width:40px; height:29px; border-radius:52% 52% 48% 48%; background:linear-gradient(145deg,#f6dcc6,#edc4a8); transform:translateX(-50%); box-shadow:inset 0 -2px 3px rgba(110,68,57,.08); }
+.gb-muzzle:before { content:""; position:absolute; top:5px; left:50%; width:9px; height:7px; border-radius:52% 52% 45% 45%; background:#503635; transform:translateX(-50%); }
+.gb-muzzle:after { content:""; position:absolute; top:13px; left:50%; width:16px; height:8px; border-bottom:2px solid #60403c; border-radius:0 0 50% 50%; transform:translateX(-50%); }
+.gb-body { position:absolute; left:27px; bottom:4px; width:74px; height:66px; border:3px solid #704744; border-radius:46% 46% 31% 31%; background:linear-gradient(145deg,#cf9275,#ad6d5b); box-shadow:inset 0 -6px 9px rgba(107,57,50,.1); z-index:2; }
+.gb-body:after { content:""; position:absolute; left:50%; top:12px; width:42px; height:38px; border-radius:50%; background:linear-gradient(145deg,#f0c9ad,#dfad90); transform:translateX(-50%); }
+.gb-bowtie { position:absolute; left:50%; top:107px; width:13px; height:13px; border:2px solid #963f5c; border-radius:50%; background:#df718d; transform:translateX(-50%); z-index:7; }
+.gb-bowtie:before,.gb-bowtie:after { content:""; position:absolute; top:-2px; width:17px; height:14px; border:2px solid #963f5c; background:linear-gradient(145deg,#f18aa2,#cc5876); }
+.gb-bowtie:before { right:8px; border-radius:10px 3px 3px 10px; transform:rotate(10deg); }
+.gb-bowtie:after { left:8px; border-radius:3px 10px 10px 3px; transform:rotate(-10deg); }
+.gb-leg { position:absolute; bottom:0; width:34px; height:25px; border:3px solid #704744; border-radius:50% 50% 42% 42%; background:#be7e65; z-index:3; }
+.gb-leg:after { content:""; position:absolute; left:50%; top:8px; width:18px; height:10px; border-radius:50%; background:#e5b394; transform:translateX(-50%); }
+.gb-leg-left { left:20px; transform:rotate(5deg); }.gb-leg-right { right:20px; transform:rotate(-5deg); }
+.gb-arm { position:absolute; width:29px; height:61px; border:3px solid #704744; border-radius:48%; background:linear-gradient(145deg,#d39a7c,#b97862); transform-origin:50% 10%; }
+.gb-arm:after { content:""; position:absolute; left:50%; bottom:-10px; width:23px; height:23px; border:3px solid #704744; border-radius:50%; background:linear-gradient(145deg,#dfaa8b,#c58469); box-shadow:inset 0 -3px 4px rgba(105,55,49,.09); transform:translateX(-50%); }
+.gb-arm:before { content:""; position:absolute; left:50%; bottom:-2px; width:10px; height:7px; border-bottom:2px solid rgba(112,71,68,.45); border-radius:50%; transform:translateX(-50%); z-index:2; }
+.gb-arm-left { right:22px; top:100px; z-index:1; transform:rotate(-63deg); animation:giftBearBraceIdle 3s ease-in-out infinite; }
+.gb-arm-right { right:-8px; top:88px; z-index:7; transform:rotate(-81deg); animation:giftBearTouchLid 2.7s ease-in-out infinite; }
+.gift-button:not(:disabled):hover .gb-head { transform:rotate(4deg) translate(2px,1px); }
+.gift-button:not(:disabled):hover .gb-arm-right { animation:giftBearTapLid .8s ease-in-out infinite; }
 .bear-bubble { position:absolute; left:-3px; top:7px; z-index:7; padding:8px 11px; border:1px solid rgba(217,121,141,.27); border-radius:14px 14px 14px 4px; color:#8f4d61; background:rgba(255,255,255,.94); box-shadow:0 8px 20px rgba(116,67,79,.1); font-size:10px; font-weight:700; letter-spacing:.02em; animation:bubbleFloat 2.6s ease-in-out infinite; }
 .bear-bubble:after { content:""; position:absolute; left:13px; bottom:-6px; width:11px; height:11px; border-right:1px solid rgba(217,121,141,.27); border-bottom:1px solid rgba(217,121,141,.27); background:#fff; transform:rotate(45deg); }
 .gift-box { position:absolute; left:59%; bottom:31px; width:146px; height:121px; z-index:5; transform:translateX(-50%); filter:drop-shadow(0 15px 16px rgba(118,57,77,.23)); }
@@ -85,28 +99,31 @@ h1 em { color:var(--rose); font-weight:400; }.heart { font-size:39px; margin:28p
 .gift-cta small { margin-top:4px; color:#a0717e; font-size:11px; }
 .gift-cta:after { content:"→"; position:absolute; right:14px; top:50%; width:31px; height:31px; display:grid; place-items:center; border-radius:50%; color:#fff; background:#bd6079; box-shadow:0 6px 13px rgba(158,76,99,.24); transform:translateY(-50%); transition:transform .25s ease; }
 .gift-button:not(:disabled):hover .gift-cta:after { transform:translate(3px,-50%); }
-.gift-stage.is-opening { animation:giftStageGlow 1.45s ease both; }
-.gift-stage.is-opening .gift-lid { animation:giftLidOpen 1.05s cubic-bezier(.2,.82,.31,1.25) forwards; }
-.gift-stage.is-opening .gift-body { animation:giftBoxBounce .8s ease .05s both; }
-.gift-stage.is-opening .gift-bear { animation:giftBearCheer .7s ease-in-out 2; }
-.gift-stage.is-opening .gb-arm-left { animation:giftArmCheerLeft .7s ease-in-out 2; }
-.gift-stage.is-opening .gb-arm-right { animation:giftArmCheerRight .7s ease-in-out 2; }
+.gift-stage.is-opening { animation:giftStageGlow 1.9s ease both; }
+.gift-stage.is-opening .gift-lid { animation:giftLidHandOpen 1.65s cubic-bezier(.22,.72,.2,1) forwards; }
+.gift-stage.is-opening .gift-body { animation:giftBoxHeld 1.65s ease both; }
+.gift-stage.is-opening .gift-bear { animation:giftBearOpenBox 1.65s cubic-bezier(.3,.7,.25,1) both; }
+.gift-stage.is-opening .gb-head { animation:giftBearHeadFollow 1.65s ease both; }
+.gift-stage.is-opening .gb-arm-left { animation:giftBearBraceBox 1.65s ease both; }
+.gift-stage.is-opening .gb-arm-right { animation:giftBearPullLid 1.65s cubic-bezier(.3,.7,.22,1) both; }
 .gift-stage.is-opening .bear-bubble { opacity:0; transform:translateY(-8px); transition:.3s ease; }
-.gift-stage.is-opening .gift-confetti i { animation:giftConfettiBurst 1s cubic-bezier(.16,.72,.28,1) var(--delay,0s) forwards; }
+.gift-stage.is-opening .gift-confetti i { animation:giftConfettiBurst 1s cubic-bezier(.16,.72,.28,1) calc(.68s + var(--delay,0s)) forwards; }
 .gift-stage.is-opening .gift-cta { animation:giftCtaPress .5s ease both; }
 @keyframes giftRays { to{transform:translateX(-50%) rotate(360deg)} }
-@keyframes giftBearBounce { 0%,100%{transform:translateY(0) rotate(-1deg)} 50%{transform:translateY(-6px) rotate(2deg)} }
-@keyframes giftBearBlink { 0%,43%,47%,100%{transform:scaleY(1)} 45%{transform:scaleY(.12)} }
-@keyframes giftBearWaveLeft { 0%,100%{transform:rotate(25deg)} 50%{transform:rotate(40deg)} }
-@keyframes giftBearWaveRight { 0%,100%{transform:rotate(-32deg)} 50%{transform:rotate(-51deg)} }
+@keyframes giftBearBreathe { 0%,100%{transform:translateY(0) rotate(-1deg)} 48%{transform:translateY(-4px) rotate(1.5deg)} }
+@keyframes giftBearBlink { 0%,44%,48%,100%{transform:scaleY(1)} 46%{transform:scaleY(.12)} }
+@keyframes giftBearBraceIdle { 0%,100%{transform:rotate(-63deg)} 50%{transform:translate(1px,1px) rotate(-66deg)} }
+@keyframes giftBearTouchLid { 0%,100%{transform:rotate(-81deg)} 50%{transform:translate(2px,-2px) rotate(-85deg)} }
+@keyframes giftBearTapLid { 0%,100%{transform:rotate(-81deg)} 50%{transform:translate(3px,2px) rotate(-87deg)} }
 @keyframes bubbleFloat { 50%{transform:translateY(-4px)} }
 @keyframes giftLidWiggle { 0%,78%,100%{transform:translateY(0) rotate(0)} 84%{transform:translateY(-2px) rotate(-3deg)} 90%{transform:translateY(-2px) rotate(3deg)} 96%{transform:translateY(-1px) rotate(-1deg)} }
 @keyframes giftStageGlow { 45%{box-shadow:0 28px 75px rgba(190,91,121,.25),0 0 0 8px rgba(255,217,143,.12)} }
-@keyframes giftLidOpen { 0%{transform:translate(0,0) rotate(0)} 45%{transform:translate(-10px,-46px) rotate(-13deg)} 100%{transform:translate(66px,-102px) rotate(27deg)} }
-@keyframes giftBoxBounce { 0%,100%{transform:translateY(0)} 36%{transform:translateY(8px) scaleY(.93)} 68%{transform:translateY(-10px) scaleY(1.04)} }
-@keyframes giftBearCheer { 0%,100%{transform:translateY(0) rotate(-3deg)} 50%{transform:translateY(-14px) rotate(5deg)} }
-@keyframes giftArmCheerLeft { 0%,100%{transform:rotate(25deg)} 50%{transform:translateY(-15px) rotate(130deg)} }
-@keyframes giftArmCheerRight { 0%,100%{transform:rotate(-32deg)} 50%{transform:translateY(-17px) rotate(-130deg)} }
+@keyframes giftLidHandOpen { 0%,18%{transform:translate(0,0) rotate(0)} 36%{transform:translate(-7px,-8px) rotate(-5deg)} 62%{transform:translate(-30px,-47px) rotate(-23deg)} 82%,100%{transform:translate(-58px,-88px) rotate(-46deg)} }
+@keyframes giftBoxHeld { 0%,18%,100%{transform:translateY(0)} 36%{transform:translateY(5px) scaleY(.96)} 62%{transform:translateY(-2px) scaleY(1.01)} }
+@keyframes giftBearOpenBox { 0%,15%{transform:translate(0,0) rotate(-1deg)} 35%{transform:translate(8px,2px) rotate(5deg)} 62%{transform:translate(-3px,-3px) rotate(-5deg)} 82%{transform:translate(-6px,-8px) rotate(2deg)} 100%{transform:translate(-2px,-13px) rotate(4deg)} }
+@keyframes giftBearHeadFollow { 0%,15%{transform:rotate(0)} 35%{transform:rotate(8deg) translate(3px,2px)} 62%{transform:rotate(-5deg) translate(-2px,-1px)} 82%,100%{transform:rotate(3deg) translateY(-2px)} }
+@keyframes giftBearBraceBox { 0%,18%{transform:rotate(-63deg)} 36%{transform:translate(5px,3px) rotate(-70deg)} 62%{transform:translate(2px,0) rotate(-61deg)} 82%,100%{transform:translate(-3px,-24px) rotate(-135deg)} }
+@keyframes giftBearPullLid { 0%,18%{transform:rotate(-81deg)} 36%{transform:translate(4px,-4px) rotate(-92deg)} 62%{transform:translate(-13px,-42px) rotate(-127deg)} 82%,100%{transform:translate(-25px,-68px) rotate(-158deg)} }
 @keyframes giftConfettiBurst { 0%{opacity:0;transform:translate(-50%,0) rotate(0)} 18%{opacity:1} 100%{opacity:0;transform:translate(calc(-50% + var(--tx)),var(--ty)) rotate(var(--rot))} }
 @keyframes giftCtaPress { 40%{transform:scale(.96)} 100%{opacity:.65;transform:scale(.98)} }
 @media(max-width:520px){.gift-stage{padding:34px 14px 22px;border-radius:28px}.gift-copy{padding:0 8px}.gift-copy h2{font-size:31px}.gift-copy>p:last-child{font-size:13px}.gift-scene{height:220px}.gift-bear{left:-2px}.gift-box{left:62%}.gift-confetti i{left:62%}.gift-cta{padding-left:16px}.bear-bubble{left:0}}
@@ -210,9 +227,12 @@ h1 em { color:var(--rose); font-weight:400; }.heart { font-size:39px; margin:28p
               <i class="gb-head">
                 <b class="gb-brow gb-brow-left"></b><b class="gb-brow gb-brow-right"></b>
                 <b class="gb-eye gb-eye-left"></b><b class="gb-eye gb-eye-right"></b>
+                <b class="gb-cheek gb-cheek-left"></b><b class="gb-cheek gb-cheek-right"></b>
                 <b class="gb-muzzle"></b>
               </i>
-              <i class="gb-body"></i><i class="gb-arm gb-arm-left"></i><i class="gb-arm gb-arm-right"></i>
+              <i class="gb-body"></i><i class="gb-bowtie"></i>
+              <i class="gb-leg gb-leg-left"></i><i class="gb-leg gb-leg-right"></i>
+              <i class="gb-arm gb-arm-left"></i><i class="gb-arm gb-arm-right"></i>
             </span>
             <span class="gift-box">
               <i class="gift-body"><b class="gift-ribbon"></b><b class="gift-tag">Tố Trinh</b><b class="gift-shine"></b></i>
@@ -309,7 +329,7 @@ h1 em { color:var(--rose); font-weight:400; }.heart { font-size:39px; margin:28p
           giftStage.hidden = true;
           birthdayLetter.hidden = false;
           birthdayLetter.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "center" });
-        }, prefersReducedMotion ? 120 : 1450);
+        }, prefersReducedMotion ? 120 : 1900);
       });
     })();
   </script>
