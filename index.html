@@ -377,12 +377,11 @@ h1 em { color:var(--rose); font-weight:400; }.heart { font-size:39px; margin:28p
         finalMessage.hidden = false;
         finalSurprise.classList.add("is-revealed");
 
-        window.requestAnimationFrame(() => {
-          finalMessage.classList.add("is-visible");
-          window.setTimeout(() => {
-            finalMessage.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "nearest" });
-          }, prefersReducedMotion ? 0 : 180);
-        });
+        finalMessage.getBoundingClientRect();
+        finalMessage.classList.add("is-visible");
+        window.setTimeout(() => {
+          finalMessage.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "nearest" });
+        }, prefersReducedMotion ? 0 : 180);
       });
     })();
   </script>
